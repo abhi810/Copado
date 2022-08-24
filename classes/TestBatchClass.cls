@@ -1,5 +1,6 @@
 public class TestBatchClass implements Database.batchable<sObject>{ 
    public Database.QueryLocator start(Database.BatchableContext info){
+      system.debug('Test change from Git');
        String query = 'SELECT ID FROM ACCOUNT LIMIT 50000';
        return Database.getQueryLocator(query);
    }     
